@@ -21,12 +21,12 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var produto in ViewBag.Categorias)
+                @foreach (var categoria in ViewBag.Categorias)
                 {
                     <tr>
-                        <td>@produto.id</td>
-                        <td>@produto.Nome</td>
-                        <td>@produto.Descricao</td>
+                        <td>@categoria.id</td>
+                        <td>@categoria.Nome</td>
+                        <td>@categoria.Descricao</td>
                     </tr>
                 }
             </tbody>

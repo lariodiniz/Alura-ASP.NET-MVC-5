@@ -12,9 +12,26 @@
 </head>
 <body>
     <div> 
-        <form action="/Produto/Adiciona">
+        <form action="/Produto/Adiciona" method="post">
             <label for="nome">Nome:</label>
-            <input id="nome" name=""
+            <input id="nome" name="produto.Nome" />
+            <label for="preco">Preço:</label>
+            <input id="preco" name="produto.Preco" />
+            <label for="quantidade">Quantidade:</label>
+            <input id="quantidade" name="produto.Quantidade" />
+            <label for="descricao">Descrição:</label>
+            <input id="descricao" name="produto.Descricao" />
+
+            <label for="categoria">Categoria:</label>
+            <section id="categoria" name="produto.CategoriaId">
+                @foreach (var categoria in ViewBag.Categorias)
+                {
+                    <option value="@categoria.Id">@categoria.Nome</option>
+                }
+                
+            </section>
+
+            <input type="submit" value="Cadastrar" />
 
         </form>
     </div>
