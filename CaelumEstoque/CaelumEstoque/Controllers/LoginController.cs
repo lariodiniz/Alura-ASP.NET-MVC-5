@@ -31,9 +31,7 @@ namespace CaelumEstoque.Controllers
             else
             {
                 return RedirectToAction("Index");
-            }
-
-            
+            }            
         }
     }
 }
